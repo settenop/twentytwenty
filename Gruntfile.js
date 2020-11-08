@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function (grunt) {
 // load all grunt tasks matching the `grunt-*` pattern
 require('load-grunt-tasks')(grunt);
@@ -11,6 +13,10 @@ grunt.initConfig({
 
 	//Compile TwentyTwenty SCSS file (without Compass) into CSS
 	sass: {
+		options: {
+			implementation: sass,
+			sourceMap: true
+		},
 		dist: {
 			files: {
 				'css/twentytwenty-no-compass.css': 'scss/twentytwenty-no-compass.scss',
