@@ -301,3 +301,30 @@ $twenty20-label-radius: 2px !default;
   margin-bottom: -($twenty20-handle-triangle-size * 2) - $twenty20-handle-triangle-position;
   @extend %css-triangle-vertical;
 }
+
+.twentytwenty-handle {
+  z-index: 110 !important;
+  will-change: transform;
+  transform: translateZ(0);
+  -moz-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+.before-wrap,
+.after-wrap {
+overflow: hidden;
+}
+.before-wrap {
+z-index: 101;
+}
+.after-wrap {
+z-index: 100;
+}
+.before-wrap,
+.before-wrap img {
+will-change: transform;
+transform: translateZ(0);
+-moz-backface-visibility: hidden; 
+-webkit-backface-visibility: hidden; 
+backface-visibility: hidden;
+}

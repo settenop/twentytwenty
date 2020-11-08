@@ -79,7 +79,7 @@
     display: block; }
   .twentytwenty-container.active .twentytwenty-overlay,
   .twentytwenty-container.active :hover.twentytwenty-overlay {
-    background: transparent; }
+    background: rgba(0, 0, 0, 0); }
     .twentytwenty-container.active .twentytwenty-overlay .twentytwenty-before-label,
     .twentytwenty-container.active .twentytwenty-overlay .twentytwenty-after-label,
     .twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-before-label,
@@ -112,7 +112,7 @@
 
 .twentytwenty-overlay {
   transition-property: background;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   z-index: 25; }
   .twentytwenty-overlay:hover {
     background: rgba(0, 0, 0, 0.5); }
@@ -180,3 +180,31 @@
   border-top: 6px solid #fff;
   bottom: 50%;
   margin-bottom: -17px; }
+
+.twentytwenty-handle {
+  z-index: 110 !important;
+  will-change: transform;
+  transform: translateZ(0);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.before-wrap,
+.after-wrap {
+  overflow: hidden; }
+
+.before-wrap {
+  z-index: 101; }
+
+.after-wrap {
+  z-index: 100; }
+
+.before-wrap,
+.before-wrap img {
+  will-change: transform;
+  transform: translateZ(0);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+/*# sourceMappingURL=twentytwenty-no-compass.css.map */
